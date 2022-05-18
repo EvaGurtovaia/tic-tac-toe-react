@@ -25,9 +25,22 @@ const App = () => {
     };
 
     return (
-        <div className="App">
-            <Icon />
-        </div>
+        <Container className="p-5">
+            <ToastContainer position="bottom-center" />
+            <Row>
+                <Col md={6} className="offset-md-3">
+                    <div className="grid">
+                        {itemsArray.map((item, index)=> (
+                            <Card>
+                                <CardBody className="box">
+                                    <Icon name={item} />
+                                </CardBody>
+                            </Card>
+                        ))}
+                    </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 
