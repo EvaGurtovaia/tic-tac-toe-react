@@ -107,6 +107,7 @@ const App = () => {
                             <Card
                                 color="warning"
                                 onClick={() => changeItem(index)}
+                                key={index}
                             >
                                 <CardBody className="box">
                                     <Icon name={item} />
